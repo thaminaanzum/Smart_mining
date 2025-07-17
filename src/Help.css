@@ -54,3 +54,11 @@
 .back-button:hover {
   background-color: #333;
 }
+
+.diagnostics-content.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 1.6;
+  font-size: 16px;
+}
