@@ -1,0 +1,56 @@
+
+
+.navbar {
+  background-color: #000;
+  padding: 15px 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Title on top-left */
+.navbar-title {
+  margin: 0;
+}
+
+/* Help container */
+.diagnostics-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Help content */
+.diagnostics-content {
+  padding: 40px;
+}
+
+/* List styling */
+.diagnostics-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.diagnostics-content li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
