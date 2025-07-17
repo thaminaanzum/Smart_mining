@@ -24,23 +24,7 @@ function Dashboard() {
     window.location.href = 'mailto:22z267@psgtech.ac.in?subject=Support Request&body=Hi, I need help with...';
   };
 
-  const [weather, setWeather] = useState(null);
 
-  useEffect(() => {
-  fetch('https://wttr.in/?format=j1')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      setWeather(data.current_condition[0]);
-    })
-    .catch(error => {
-      console.error('Error fetching weather:', error);
-    });
-}, []);
 
   return (
     <div className="dashboard">
@@ -48,15 +32,7 @@ function Dashboard() {
       <div className="navbar">
         <h2 className="navbar-title">Smart Machinery Assistant</h2>
       </div>
-      <div className="weather-box">
-        {weather ? (
-          <div>
-            🌤️ <strong>{weather.name}</strong>: {weather.weather[0].description}, {weather.main.temp}°C
-          </div>
-        ) : (
-          <div>Loading weather...</div>
-        )}
-      </div>
+      
 
 
       <h1>Machine Task Dashboard</h1>
@@ -111,10 +87,7 @@ function Dashboard() {
       </div>
 
       {/* Emergency Button */}
-      <button className="emergency-button" onClick={handleEmergencyClick} title="Trigger emergency alert and recording">
-        <FaExclamationTriangle size={24} />
-        {recording && <div className="recording-indicator">Recording...</div>}
-      </button>
+      
     </div>
   );
 }
